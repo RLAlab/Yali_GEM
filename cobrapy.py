@@ -7,10 +7,18 @@ model_iYLI649 = cobra.io.read_sbml_model('models/iYLI649.xml')
 model_iYali = cobra.io.read_sbml_model('models/iYali.xml')
 model_iYli21 = cobra.io.read_sbml_model('models/iYli21.xml')
 
-# Print the number of reactions
+# Stats
 print("Total number of reactions:")
 for model in [model_iYLI649, model_iYali, model_iYli21]:
     print(f"{model}: {len(model.reactions)}")
+
+print("Total number of genes:")
+for model in [model_iYLI649, model_iYali, model_iYli21]:
+    print(f"{model}: {len(model.genes)}")
+
+print("Total number of metabolites:")
+for model in [model_iYLI649, model_iYali, model_iYli21]:
+    print(f"{model}: {len(model.metabolites)}")
 # %%
 
 print("Examples:\n")
