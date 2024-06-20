@@ -36,7 +36,11 @@ biomass_iYali = model_iYali.reactions.get_by_id('xBIOMASS')
 biomass_iYli21 = model_iYli21.reactions.get_by_id('biomass_C')
 
 # %%
+print(biomass_iYLI649)
+print(biomass_iYLI649.reactants)
+print(biomass_iYali.products)
 
+#%%
 # For example, the first reactant in biomass_iYLI649 is 13BDglcn_c (1_3_beta_D_Glucan)
 
 # You find all the reactions involving this metabolite:
@@ -77,6 +81,9 @@ for reaction in reactions_involving_metabolite:
 
 # Therefore, we can map each metabolite name between the models:
 
+metabolite = model_iYLI649.metabolites.get_by_id('13BDglcn_c')
+print(metabolite.name)
+
 metabolite = model_iYali.metabolites.get_by_id('s_0001')
 print(metabolite.name)
 
@@ -91,3 +98,4 @@ print(metabolite.name)
 # You do this for each reactant and product in the biomass reactions, and once you have all the mappings
 # you can rewrite the biomass equations using the corresponding nomenclature 
 # and exchange the biomass reactions between the models
+# %%
